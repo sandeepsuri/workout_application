@@ -9,6 +9,7 @@ import { useState } from 'react';
 export default function Home() {
   const router = useRouter()
   const auth = getAuth()
+  console.log(auth)
   const [user, loading] = useAuthState(auth)
 
   if(loading) {
@@ -34,16 +35,14 @@ export default function Home() {
   }
 
   if(user){
-    router.push('dashboard')
+    router.push('Dashboard')
     // return <div>Welcome {user.displayName}</div>
   }
 
-  else {
-    return (
-      <div>
-        <h1>Ultimate Workout App</h1>
-        <GoogleButton />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <h1>Ultimate Workout App</h1>
+      <GoogleButton />
+    </div>
+  )
 }

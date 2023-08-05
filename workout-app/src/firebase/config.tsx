@@ -1,17 +1,20 @@
 import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
-    apiKey: process.env.FB_AK,
-    authDomain: process.env.FB_AD,
-    projectId: process.env.FB_PID,
-    storageBucket: process.env.FB_SB,
-    messagingSenderId: process.env.FB_MSID,
-    appId: process.env.FB_AID,
-    measurementId: process.env.FB_MID
+    apiKey: process.env.NEXT_PUBLIC_FB_AK,
+    authDomain: process.env.NEXT_PUBLIC_FB_AD,
+    projectId: process.env.NEXT_PUBLIC_FB_PID,
+    storageBucket: process.env.NEXT_PUBLIC_FB_SB,
+    messagingSenderId: process.env.NEXT_PUBLIC_FB_MSID,
+    appId: process.env.NEXT_PUBLIC_FB_AID,
+    measurementId: process.env.NEXT_PUBLIC_FB_MID
 };
   
+console.log(firebaseConfig)
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-export const initializeFirebase = () => { return app }
+export { app }
+
+// export const initializeFirebase = () => { return app }
 
