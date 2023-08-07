@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-// import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { app } from '@/firebase/config'
 
@@ -14,21 +13,16 @@ export default function GoogleButton() {
     }
 
     return (
-      <div className="px-8 py-32">
-      <div className="grid gap-8 items-start justify-center">
-        <div className="relative group">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-400 to-slate-800 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-          <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
-            <span className="flex items-center space-x-5">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white -rotate-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-              <path fillRule="evenodd" d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z" clipRule="evenodd"/>
-              </svg>
-              <span className=" text-gray-100"> </span>
-            </span>
-            <span className="pl-6 text-white group-hover:text-gray-100 transition duration-200">Sign in with Google </span>
-          </button>
-        </div>
-      </div>
-    </div>
+        // <button onClick={signIn}>
+        //     <div className='bg-blue-600 text-white rounded-md p-2 w-48'>
+        //         Sign In With Google
+        //     </div>
+        // </button>
+        <button onClick={signIn} type="button" className="">
+            <svg className="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
+            </svg>
+            Sign in with Google
+        </button>
     )
 }
