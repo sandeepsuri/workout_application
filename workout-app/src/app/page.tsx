@@ -27,14 +27,11 @@ export default function Home() {
         <img
           src="/Logo.svg"
           alt="Greatest Workout App"
-          width={240}
-          height={140}
+          width={2040}
+          height={1040}
           className="object-contain"
         />
-    
         <GoogleButton />
-       
-      
       </div>
     </div>
   );

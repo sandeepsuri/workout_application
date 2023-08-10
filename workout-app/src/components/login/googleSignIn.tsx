@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-// import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { app } from '../../firebase/config'
 
@@ -17,7 +16,7 @@ export default function GoogleButton() {
       <div className="px-8 py-32">
       <div className="grid gap-8 items-start justify-center">
         <div className="relative group">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-white to-slate-400 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-white to-slate-400 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-2000 group-hover:duration-700 animate-tilt"></div>
           <button onClick={signIn} type="button" className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
             <span className="flex items-center space-x-5">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white -rotate-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
