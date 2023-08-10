@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import GoogleButton from '@/login/googleSignIn';
+import GoogleButton from '../components/login/googleSignIn';
 
 export default function Home() {
   const router = useRouter()
@@ -31,7 +31,10 @@ export default function Home() {
           height={140}
           className="object-contain"
         />
+    
         <GoogleButton />
+       
+      
       </div>
     </div>
   );
