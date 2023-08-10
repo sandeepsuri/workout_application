@@ -26,3 +26,13 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+.homeWallpaper {
+  background-image: url("/bghome.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Make sure the background covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity by changing the alpha value (0.5 in this example) */
+}
+
+
