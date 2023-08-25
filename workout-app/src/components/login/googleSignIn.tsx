@@ -9,7 +9,6 @@ export default function GoogleButton() {
 
     const signIn = async () => {
         const result = await signInWithRedirect(auth, provider)
-        console.log(result)
     }
 
     return (

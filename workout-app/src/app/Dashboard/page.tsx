@@ -1,16 +1,40 @@
 'use client'
-import { getAuth, onAuthStateChanged } from "firebase/auth"
 import { useRouter } from 'next/navigation';
-import Feed from "@/components/feed";
-import Navbar from "@/components/navbar";
+import { app } from "@/firebase/config";
+import React, { useState, useEffect } from "react";
+import { 
+  browserLocalPersistence, 
+  getAuth, 
+  getRedirectResult, 
+  onAuthStateChanged, 
+  setPersistence 
+} from "firebase/auth"
+
 
 export default function Dashboard() {
-  const router = useRouter()
-  const auth = getAuth()
+  const auth = getAuth();
+  const router = useRouter();
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true); // Set the isClient state to true when the component is mounted on the client side
+  }, []);
 
-  onAuthStateChanged (auth, async (user) => {
-    if(!user) router.push('/')
-  })
+  useEffect(() => {
+    getAuth(app)
+    if (isClient) {
+      // Stays logged in unless you sign out manuelly
+      setPersistence(auth, browserLocalPersistence);
+
+      const unsubscribe = onAuthStateChanged(auth, async (user) => {
+        if (!user) router.push('/');
+      });
+
+      return () => {
+        unsubscribe(); // Clean up the subscription when the component unmounts
+      };
+    }
+  }, [auth, isClient, router]);
 
   return (
     <div className="flex flex-col items-center h-screen">
