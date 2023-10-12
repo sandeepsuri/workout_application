@@ -51,8 +51,8 @@ const Log = () => {
         <Image
           src="/Log.svg"
           alt="log"
-          width={200}
-          height={200}
+          width={100}
+          height={100}
           onMouseDown={handleImageHold}
           onMouseUp={handleImageRelease}
         />
