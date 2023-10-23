@@ -10,7 +10,7 @@ const weekpot = ({toggleBoard, handleToggle}) => {
 
   return (
     <div>
-      { !toggleBoard ?
+      { !toggleBoard ? (
         <div className="w-80 h-40 justify-center items-center inline-flex" onClick={handleToggle}>
           <div className="w-80 h-40 bg-slate-800 rounded-2xl border-l-4 border-r-4 border-t-8 border-b-8 border-cyan-900 flex-col justify-center items-center inline-flex">
             <div className="w-72 h-20 text-center text-black text-5xl font-medium font-['Reenie Beanie'] leading-loose">$300</div>
@@ -19,60 +19,32 @@ const weekpot = ({toggleBoard, handleToggle}) => {
             </div>
           </div>
         </div>
-        :
-        <div className="w-80 h-[32rem] relative" onClick={handleToggle}>
-          <div className="w-80 h-[32rem] px-1 pt-7 pb-96 left-0 top-0 absolute bg-slate-800 rounded-2xl border-l-4 border-r-4 border-t-8 border-b-8 border-cyan-900 flex-col justify-start items-center inline-flex">
-              <div className="w-72 h-20 text-center text-black text-5xl font-medium font-['Reenie Beanie'] leading-loose">$300</div>
+      ) : (
+        <div className="w-80 h-96 bg-slate-800 rounded-2xl border-l-4 border-r-4 border-t-8 border-b-8 border-cyan-900 flex flex-col items-center p-6" onClick={handleToggle}>
+          <div className="w-full text-center text-black text-6xl font-bold mb-6">$300</div>
+
+          <div className="w-5/6 h-7 text-white text-xs font-light font-['Roboto'] mb-5 flex justify-between">
+              <span>Rank</span>
+              <span>Name</span>
+              <span>Contribution</span>
           </div>
 
-          <div className="w-64 h-72 left-[26px] top-[194px] absolute flex-col justify-center items-start gap-5 inline-flex overflow-auto">
-              
-
-            <div className="w-64 flex">
-              <div className="w-5 h-7 relative text-center">
-                <div className="w-5 h-5 bg-black rounded-full shadow border border-yellow-400">
-                  <div className="w-6 left-0 text-center text-yellow-400 text-xs font-medium font-['Inter'] leading-loose mx-auto">1</div>
+            <div className="w-5/6 flex flex-col gap-4">
+                {/* Sample Entry */}
+                <div className="flex items-center justify-between text-white">
+                    <div className="flex items-center gap-6">
+                        <div className="w-6 h-6 bg-black rounded-full shadow border border-yellow-400 flex items-center justify-center">
+                            <span className="text-yellow-400 text-sm font-medium">1</span>
+                        </div>
+                        <span>Shanthosh Y</span>
+                    </div>
+                    <span>$0.00</span>
                 </div>
-              </div>
-              <div className="w-32 mr-20 text-white text-xs font-normal font-['Roboto'] leading-loose">Shanthosh Y</div>
-              <div className="w-24 left-[10px] text-white text-xs font-normal font-['Roboto'] leading-loose text-right">$0.00</div>
+                <div className="w-full h-px border border-sky-600 my-2"></div>
+                {/* Repeat the above structure for each entry */}
             </div>
-            <div className="w-64 h-px border border-sky-600"></div>
-
-            <div className="w-64 flex">
-              <div className="w-5 h-7 relative text-center">
-                <div className="w-5 h-5 bg-black rounded-full shadow border border-yellow-400">
-                  <div className="w-6 left-0 text-center text-yellow-400 text-xs font-medium font-['Inter'] leading-loose mx-auto">1</div>
-                </div>
-              </div>
-              <div className="w-32 mr-20 text-white text-xs font-normal font-['Roboto'] leading-loose">Shanthosh Y</div>
-              <div className="w-24 left-[10px] text-white text-xs font-normal font-['Roboto'] leading-loose text-right">$0.00</div>
-            </div>
-            <div className="w-64 h-px border border-sky-600"></div>
-
-
-            <div className="w-64 flex">
-              <div className="w-5 h-7 relative text-center">
-                <div className="w-5 h-5 bg-black rounded-full shadow border border-yellow-400">
-                  <div className="w-6 left-0 text-center text-yellow-400 text-xs font-medium font-['Inter'] leading-loose mx-auto">1</div>
-                </div>
-              </div>
-              <div className="w-32 mr-20 text-white text-xs font-normal font-['Roboto'] leading-loose">Shanthosh Y</div>
-              <div className="w-24 left-[10px] text-white text-xs font-normal font-['Roboto'] leading-loose text-right">$0.00</div>
-            </div>
-            <div className="w-64 h-px border border-sky-600"></div>
-          </div>
-          
-          <div className="w-56 h-7 left-[41px] top-[149px] absolute">
-              <div className="left-[172px] top-0 absolute text-center text-white text-xs font-light font-['Roboto'] leading-loose">Contribution</div>
-              <div className="left-0 top-0 absolute text-center text-white text-xs font-light font-['Roboto'] leading-loose">Rank</div>
-              <div className="left-[58px] top-0 absolute text-center text-white text-xs font-light font-['Roboto'] leading-loose">Name</div>
-          </div>
-          <div className="w-72 h-10 left-[5px] top-[102px] absolute bg-gray-900 flex-col justify-center items-center gap-10 inline-flex">
-              <div className="text-center text-white text-opacity-80 text-sm font-normal font-['Roboto'] leading-loose tracking-widest">LEADERBOARD</div>
-          </div>
         </div>
-      }
+      )}
 
     </div>
   )
