@@ -4,12 +4,12 @@ import "@fontsource/reenie-beanie"
 const weekpot = ({toggleBoard, handleToggle}) => {
 
   const nameMapping = {
-    1: 'Sandeep Suri',
-    2: 'Harvir Sidhu',
-    3: 'Jimi Patel',
-    4: 'Deshane Medley',
-    5: 'Shanthosh Yogendren',
-    6: 'Gurkirat Gill'
+    1: 'Sandeep S',
+    2: 'Harvir S',
+    3: 'Jimi P',
+    4: 'Deshane M',
+    5: 'Shanthosh Y',
+    6: 'Gurkirat G'
   }
 
   return (
