@@ -52,7 +52,7 @@ export default function Dashboard() {
     <Weekpot toggleBoard={toggleBoard} handleToggle={handleToggle} />
     {toggleBoard ? null : <Log />}
     {/* <Log /> */}
-    <footer className="bg-black"><button onClick={() => auth.signOut()} className="mt-4 text-white">Sign Out</button></footer>
+    <footer className="bg-black mt-2"><button onClick={() => auth.signOut()} className="mt-4 text-white">Sign Out</button></footer>
   </div>  
   )
 }
