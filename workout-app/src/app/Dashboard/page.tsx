@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
+import WeekTracker from "@/components/weekTracker";
 import Weekpot from "@/components/weekpot";
 import Header from "@/components/header";
 import Log from "@/components/log";
@@ -43,6 +44,7 @@ export default function Dashboard() {
   return (
   <div className="flex flex-col items-center h-screen">
     <Header />
+    <WeekTracker />
     <Weekpot />
     <Log />
     <footer className="bg-black"><button onClick={() => auth.signOut()} className="mt-4 text-white">Sign Out</button></footer>
