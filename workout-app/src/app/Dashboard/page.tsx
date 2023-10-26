@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import WeekTracker from "@/components/weekTracker";
+import WeekTracker from '@/components/weektracker';
 import Weekpot from "@/components/weekpot";
 import Header from "@/components/header";
 import Log from "@/components/log";
@@ -20,6 +20,11 @@ export default function Dashboard() {
   const auth = getAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
+  const [toggleBoard, setToggleBoard] = useState(false)
+
+  const handleToggle = () => {
+    setToggleBoard(!toggleBoard)
+  }
   
   useEffect(() => {
     setIsClient(true); // Set the isClient state to true when the component is mounted on the client side
@@ -45,9 +50,10 @@ export default function Dashboard() {
   <div className="flex flex-col items-center h-screen">
     <Header />
     <WeekTracker />
-    <Weekpot />
-    <Log />
-    <footer className="bg-black"><button onClick={() => auth.signOut()} className="mt-4 text-white">Sign Out</button></footer>
+    <Weekpot toggleBoard={toggleBoard} handleToggle={handleToggle} />
+    {toggleBoard ? null : <Log />}
+    {/* <Log /> */}
+    <footer className="bg-black mt-2"><button onClick={() => auth.signOut()} className="mt-4 text-white">Sign Out</button></footer>
   </div>  
   )
 }
