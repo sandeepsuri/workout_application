@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
+import WeekTracker from '@/components/weektracker';
 import Weekpot from "@/components/weekpot";
 import Header from "@/components/header";
 import Log from "@/components/log";
@@ -48,7 +49,7 @@ export default function Dashboard() {
   return (
   <div className="flex flex-col items-center h-screen">
     <Header />
-    <br />
+    <WeekTracker />
     <Weekpot toggleBoard={toggleBoard} handleToggle={handleToggle} />
     {toggleBoard ? null : <Log />}
     {/* <Log /> */}
