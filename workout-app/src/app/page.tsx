@@ -1,17 +1,10 @@
 'use client'
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+// import { useRouter } from 'next/navigation';
+// import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import GoogleButton from '../components/login/googleSignIn';
 
 export default function Home() {
-  const router = useRouter()
-  const auth = getAuth()
-
-  onAuthStateChanged (auth, async (user) => {
-    if(user) router.push('Dashboard')
-    else console.log('not logged in')
-  })
 
   return (
     <div className='homeWallpaper'>
