@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import "@fontsource/reenie-beanie"
 
-const weekpot = ({toggleBoard, handleToggle}) => {
+interface WeekpotProps {
+  toggleBoard: boolean;
+  handleToggle: () => void
+}
+
+const weekpot = ({toggleBoard, handleToggle}: WeekpotProps) => {
 
   const nameMapping = {
     1: 'Sandeep S',

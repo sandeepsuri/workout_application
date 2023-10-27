@@ -1,14 +1,14 @@
 'use client'
 import React from 'react'
-import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
-import { app } from '../../firebase/config'
+// import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
+// import { app } from '../../firebase/config'
+import { useRouter } from 'next/navigation';
+
 
 export default function GoogleButton() {
-    const provider = new GoogleAuthProvider()
-    const auth = getAuth(app)
-
+    const router = useRouter()
     const signIn = async () => {
-        const result = await signInWithRedirect(auth, provider)
+        router.push('Dashboard')
     }
 
     return (
