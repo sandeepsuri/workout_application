@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import WeekTracker from '@/components/weektracker';
+import WeekTracker from '@/components/weekTracker';
 import Weekpot from "@/components/weekpot";
 import Header from "@/components/header";
 import Log from "@/components/log";
