@@ -21,4 +21,4 @@ const WeekTracker = () => {
   );
 };
 
-export default weekTracker;
+export default WeekTracker;
