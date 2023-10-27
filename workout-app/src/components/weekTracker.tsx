@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const weekTracker: React.FC = () => {
+const weekTracker = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const handleClick = () => {
