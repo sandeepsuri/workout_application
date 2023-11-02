@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const WeekTracker = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +10,7 @@ const WeekTracker = () => {
   return (
     <div className="flex justify-center items-start min-h-96 p-4">
       <button
-        className={`w-${buttonClicked ? 'full' : '52'} h-[20px] px-4 py-[16px] rounded-full justify-center items-center inline-flex bg-red-700 text-white`}
+        className={`w-${buttonClicked ? 'full' : '32'} h-[20px] px-4 py-[16px] rounded-full justify-center items-center inline-flex bg-red-700 text-white`}
         onClick={handleClick}
         style={{ fontFamily: 'Impact' }}
       >
