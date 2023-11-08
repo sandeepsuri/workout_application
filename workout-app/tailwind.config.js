@@ -13,7 +13,9 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        'reenie': ['Reenie Beanie', 'cursive']
+        'reenie': ['Reenie Beanie', 'cursive'],
+        'inter': ['Inter', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif']
       }
     },
   },
