@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 export default function GoogleButton() {
     const router = useRouter()
     const signIn = async () => {
-        router.push('Dashboard')
+        router.push('Setup')
     }
 
     return (
