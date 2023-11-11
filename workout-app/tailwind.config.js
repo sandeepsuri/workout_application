@@ -16,6 +16,20 @@ module.exports = {
         'reenie': ['Reenie Beanie', 'cursive'],
         'inter': ['Inter', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif']
+      },
+      keyframes: {
+        slideDown: {
+          '0%' : { transform: 'translateY(-100%)'},
+          '100%' : { transform: 'translateY(0)'}
+        },
+        slideUp: {
+          '0%' : { transform: 'translateY(100%)'},
+          '100%': { transform: 'translateY(0)'}
+        }
+      },
+      animation: {
+        slideDown: 'slideDown 3s ease-out forwards',
+        slideUp: 'slideUp 3s ease-out forwards',
       }
     },
   },
