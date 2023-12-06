@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { animate } from "framer-motion"
 
 const Setup = () => {
     const router = useRouter()
@@ -28,7 +27,7 @@ const Setup = () => {
             </div>
             
             {/* Centered WORKOUT APP text */}
-            <div className={`flex justify-center items-center w-full  ${animate ? 'animate-scale' : ''}`} style={{height: '12%'}}>
+            <div className="flex justify-center items-center w-full" style={{height: '12%'}}>
                 <Image
                 src="/header_logo.svg"
                 alt="header"
