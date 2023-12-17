@@ -48,11 +48,7 @@ const Create = () => {
                     {/* ACCESS CODE INPUT */}
                     <input className="w-72 h-10 px-2.5 bg-gray-900 bg-opacity-20 rounded-md border border-white" placeholder="ACCESS CODE" />
                     {/* CONFIRM ACCESS CODE INPUT */}
-                    <input className="w-72 h-10 px-2.5 bg-gray-900 bg-opacity-20 rounded-md border border-white" placeholder="CONFIRM ACCESS CODE" />
-                
-                    <button className="px-6 py-1.5 bg-teal-950 rounded-2xl" onClick={handleNextClick}>
-                        <div className="text-white text-xl font-light font-inter">NEXT</div>
-                    </button>
+                    <input className="w-72 h-10 px-2.5 bg-gray-900 bg-opacity-20 rounded-md border border-white" placeholder="CONFIRM ACCESS CODE" />  
                 </div>
                 {/* Step 2 of Create */}
                 <div className={`w-full flex-col flex items-center gap-8 ${pageIndex === 2 ? '' : 'hidden'}`} >
@@ -66,10 +62,6 @@ const Create = () => {
                     <input className="w-72 h-10 px-2.5 bg-gray-900 bg-opacity-20 rounded-md border border-white" placeholder="START DATE" />
                     {/* DURATIONS INPUT */}
                     <input className="w-72 h-10 px-2.5 bg-gray-900 bg-opacity-20 rounded-md border border-white" placeholder="DURATION (WEEKS)" />
-                    
-                    <button className="px-6 py-1.5 bg-teal-950 rounded-2xl" onClick={handleNextClick}>
-                        <div className="text-white text-xl font-light font-inter">NEXT</div>
-                    </button>
                 </div>
                 {/* Step 3 of Create */}
                 <div className={`w-full flex-col flex items-center gap-8 ${pageIndex === 3 ? '' : 'hidden'}`} >
@@ -102,11 +94,11 @@ const Create = () => {
                             <div className="text-white text-sm font-light font-roboto">26 WEEKS</div>
                         </div>
                     </div>
-
-                    <button className="px-6 py-1.5 bg-white rounded-2xl" onClick={handleNextClick}>
-                        <div className="text-sky-900 text-xl font-light font-inter">CREATE</div>
-                    </button>
                 </div>
+
+                <button className="px-6 py-1.5 bg-teal-950 rounded-2xl" onClick={handleNextClick}>
+                    <div className="text-white text-xl font-light font-inter">NEXT</div>
+                </button>
             </div>
         </div>
     )
