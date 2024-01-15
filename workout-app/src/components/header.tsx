@@ -4,9 +4,9 @@ import Image from "next/image";
 const header = () => {
   return (
     <div className='container'>
-          <div className="h-20 bg-gray-700 flex justify-center">
+          <div className="h-20 bg-[#004563] flex justify-center">
             <Image
-              src="/header_logo.svg"
+              src="/logo_white.svg"
               alt="header"
               width={200}
               height={200}

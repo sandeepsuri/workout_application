@@ -27,7 +27,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex flex-col items-center h-screen bg-gray-800">
+    <div className="flex flex-col items-center h-screen bg-[#B8B8B8]">
       <Header />
       <WeekTracker />
       <Weekpot toggleBoard={toggleBoard} handleToggle={handleToggle} />

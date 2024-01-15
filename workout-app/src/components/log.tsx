@@ -36,7 +36,7 @@ const Log = () => {
   return (
     <div>
       <div className="flex rounded-full gap-4 py-4">
-        {[1, 2, 3, 4, 5].map((number) => (
+        {[1, 2, 3, 4].map((number) => (
           <div
             key={number}
             className={`  w-16 h-16 rounded-full shadow inline-flex items-center justify-center text-white text-4xl font-Roboto leading-loose ${
