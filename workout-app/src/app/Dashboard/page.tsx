@@ -4,6 +4,7 @@ import WeekTracker from "@/components/weekTracker";
 import Weekpot from "@/components/weekpot";
 import Header from "@/components/header";
 import Log from "@/components/log";
+import Navbar from "@/components/navbar";
 import { app } from "@/firebase/config";
 import React, { useState, useEffect } from "react";
 import {
@@ -33,11 +34,12 @@ export default function Dashboard() {
       <Weekpot toggleBoard={toggleBoard} handleToggle={handleToggle} />
       {toggleBoard ? null : <Log />}
       {/* <Log /> */}
-      <footer className="bg-black mt-2">
+      {/* <footer className="bg-black mt-2">
         <button onClick={signOut} className="mt-4 text-white">
           Sign Out
         </button>
-      </footer>
+      </footer> */}
+      <Navbar />
     </div>
   );
 }
